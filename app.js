@@ -30,7 +30,7 @@ app.get('/login',function(req,res){
 });
 
 app.get('/weatherNow',function(req,res){
-  res.render('weather');
+  res.render('weather',{info:"Enter the name of the city",t:" " , p:" ",h:" " , w:" "});
 });
 
 
@@ -72,7 +72,7 @@ app.post('/login',urlencodedParser,function(req,res){
           if(pwd==database_pass){
               console.log("matched");
               alert("login successful");
-              res.redirect('/');
+              res.redirect('/weatherNow');
           }
           else{
               console.log("not matched");
@@ -87,7 +87,10 @@ app.post('/login',urlencodedParser,function(req,res){
 });
 
 
+
+
 app.post('/weatherNow',urlencodedParser,function(req,res){
+
 
   var city=req.body.city
   console.log(city);
@@ -96,7 +99,12 @@ app.post('/weatherNow',urlencodedParser,function(req,res){
 
  request(api, (error, response, today) => {
  const data=JSON.parse(today);
- console.log(data.weather);
+ console.log(data);
+ var t=JSON.stringify(data.main.temp)
+ var p=JSON.stringify(data.main.pressure)
+ var h=JSON.stringify(data.main.humidity)
+ var w=JSON.stringify(data.weather)
+ res.render("weather",{t:t , p:p,h:h , w:w , info: " "});
  
 
 
