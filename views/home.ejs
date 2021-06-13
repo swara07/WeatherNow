@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherNow</title>
+    </head>
+    <body>
+        <div class="container">
+        <nav>
+            <ul>
+                <li style="float: left;"><a href="/" >WeatherNow</a></li>
+                <li><a href="/soilcheck">Contact us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/">Home</a></li>
+              </ul>
+        </nav>
+        <br>
+      
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/911hJi5i25L.png" style="width:100%; height: 640px;">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://www.kenya.campusfrance.org/sites/pays/files/kenya/new-history-forecast-bulk_0.png" style="width:100% ; height: 640px;">
+            <div class="text">Caption Two</div>
+          </div>
+        
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+         
+          </div>
+
+          <div class="about" style="text-align: center;">
+            <h2>About</h2>
+            <div class="textt">
+            <p>Crop production depends on the availability of arable land and is affected in particular by yields, macroeconomic uncertainty, as well as consumption patterns; it also has a great incidence on agricultural commodities' prices. The importance of crop production is related to harvested areas, returns per hectare (yields) and quantities produced.
+
+              Crop yields are the harvested production per unit of harvested area for crop products. In most of the cases yield data are not recorded, but are obtained by dividing the production data by the data on area harvested. The actual yield that is captured on farm depends on several factors such as the crop's genetic potential, the amount of sunlight, water and nutrients absorbed by the crop, the presence of weeds and pests. This indicator is presented for wheat, maize, rice and soybean. Crop production is measured in tonnes per hectare, in thousand hectares and thousand tonnes.
+              
+              Content
+              The csv file has 5 columns:
+              
+              LOCATION = the country code name
+              SUBJECT = The type of crop(rice,soybean,etc)
+              TIME = the year the data was recorded
+              MEASURE = the measuring metric used
+              VALUE = The value, according to the measuring metric specified
+              
+              Acknowledgements
+              https://data.oecd.org/agroutput/crop-production.htm</p>
+              </div>
+            </div>
+          <br>
+          <br>
+
+          <footer>
+            <p>Copyright &copy; 2021 WeatherNow.</p>
+          </footer>
+      
+    </div>
+   
+    </body>
+</html>
+
+<style>
+    .container{
+        padding: 10px;
+        margin: 15px;
+    }
+   
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#045F5F;
+    }
+    li {
+  float: right;
+    }
+
+    li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 20px;
+  text-decoration: none;
+    }
+
+    li a:hover {
+  color: #111;
+  
+    }
+
+    .slideshow-container {
+  max-width: 1500px;
+  max-height: 900px;
+  position: relative;
+  margin: auto;
+ 
+  
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 12px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.about{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 20px;
+}
+.about:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.textt{
+  font-size: 18px;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+footer {
+	position:initial;
+	width: 100%;
+  height: 50px;
+	left: 0;
+	bottom: 0;
+	background-color:#045F5F;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+
+  
+  
+  </script>
+  
+
+
+               
