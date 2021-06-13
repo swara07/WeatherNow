@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherNow</title>
+    </head>
+    <body>
+        <div class="container">
+        <nav>
+            <ul>
+                <li style="float: left;"><a href="/" >WeatherNow</a></li>
+                <li><a href="/soilcheck">Contact us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/">Home</a></li>
+              </ul>
+        </nav>
+        <br>
+               <br>
+               <center>
+               <div class="weathercity">
+                    <br>
+                    <br>
+                    <h2>Weather Info</h2>
+               
+                     <form class="form-group"  method="post">
+                         
+                         <label  class="labe">Enter the city name</label>
+                         <br>
+                         <input type="text" name="city" placeholder="Enter city name"  required>
+                         <br>
+                         <br>
+                     
+                         <button class="btn btn-danger">Submit</button>
+                         <br>
+                         <br>
+                         <h3>  </h3>
+         
+                        </form>
+                        </div>
+            
+            </center>
+            </div>
+            </body>
+            </html>
+            <style>
+                .container{
+                    padding: 10px;
+                    margin: 15px;
+                }
+               
+                ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color:#045F5F;
+                }
+                li {
+              float: right;
+                }
+            
+                li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 20px 16px;
+              font-size: 20px;
+              text-decoration: none;
+                }
+            
+                li a:hover {
+              color: #111;
+              
+                }
+                
+                input{
+                     width:45%;
+                      padding: 10px;
+                      margin: 10px 0 3px 0;
+                      display: inline-block;
+                      border: none;
+                      background: #f1f1f1;
+                      border-style: solid;
+                      border-color: #033E3E ;
+                      border-width: thin;
+                      border-radius: 25px;
+                      text-align: center;
+                }
+        
+                input:focus{
+                    border-radius: 25px;
+                    border: none;
+                    border-style: solid;
+                    border-color: #033E3E ;
+                    margin: 10px 0 10px 0;
+                    outline-width: 0;
+                    border-width: thin;
+        
+                }
+        
+                .labe{
+                    color: #033E3E;
+                    font-weight: bold;
+                    font-size: 20px;
+        
+        
+                }
+                .weathercity{
+                    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+                    border-radius: 25px;
+                    width: 60%;
+                    height: 70%;
+                    
+                }
+                button {
+      background-color: #045F5F;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 22px;
+    }
+    
+    
+                </style>
+                   

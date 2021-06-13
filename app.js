@@ -2,6 +2,7 @@
 var alert = require('alert');
 var express=require('express');
 var bodyParser=require('body-parser');
+const request=require('request');
 var app=express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var MongoClient=require('mongodb').MongoClient;
@@ -26,6 +27,10 @@ app.get('/register',function(req,res){
 
 app.get('/login',function(req,res){
     res.render('login');
+});
+
+app.get('/weatherNow',function(req,res){
+  res.render('weather');
 });
 
 
@@ -80,6 +85,28 @@ app.post('/login',urlencodedParser,function(req,res){
         });
       });
 });
+
+
+app.post('/weatherNow',urlencodedParser,function(req,res){
+
+  var city=req.body.city
+  console.log(city);
+  
+ const api=`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0155ed6a3cb2add53b6dd673ca22fc3b`;
+
+ request(api, (error, response, today) => {
+ const data=JSON.parse(today);
+ console.log(data.weather);
+ 
+
+
+ });
+
+
+
+});
+
+
 
 
 app.listen(3000);
